@@ -19,7 +19,7 @@ services:
     - "3306"
     
   app:
-    image: app
+    image: appimage
     container_name: myapplication
     ports:
     - "80:80"
