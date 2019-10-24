@@ -1,0 +1,60 @@
+ctop - утилита
+Ctrl+p Ctrl+s выход без прерывания процесса
+
+docker attach - присоединиться к контейнеру
+
+docker build --tag=friendlyhello   - создать контейнер
+
+
+
+
+docker run -p 4000:80 friendlyhello запуск кконтейнера
+
+docker-compose.yml поведение контейнеров
+
+docker stack deploy -c docker-compose.yml getstartedlab - запуск стека контейнеров
+
+docker exec -it <mycontainer> bash - run something inside container
+docker attach alpine1 - connect to container
+
+
+docker build . -t test-ng
+docker run -d -p 80:80 test-ng
+docker container stop
+docker container rm 
+docker images
+docker image rm 
+
+docker run -ti -v /var/run/docker.sock:/var/run/docker.sock quay.io/vektorlab/ctop:latest
+
+docker volume create my-vol
+docker volume ls
+
+$ docker run -d \
+  --name devtest \
+  --mount source=myvol2,target=/app \
+  nginx:latest
+  
+  
+  docker inspect containername - show mounts
+  
+
+
+
+docker run --name name -it -d -p 80:80 myappfromdocker
+
+docker rm $(docker ps -a -q) - remove all containers
+
+
+
+
+docker-compose up -d
+docker-compose down
+
+
+
+
+
+
+
+docker run -d --name test-nginx -p 80:80 -v $(pwd):/usr/share/nginx/html:ro
