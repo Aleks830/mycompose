@@ -2,7 +2,7 @@
  MAINTAINER turbopipe@gmail.com
  ARG DEBIAN_FRONTEND=noninteractive
  RUN apt-get update && apt-get upgrade -y
- RUN apt --no-install-recommends install nginx php php-fpm php-mysql iputils-ping supervisor -y 
+ RUN apt --no-install-recommends install nginx php php-fpm php-mysql supervisor -y 
  RUN apt-get update && apt-get upgrade -y
  COPY index.php /home/manager/app/
  COPY default /etc/nginx/sites-enabled/
